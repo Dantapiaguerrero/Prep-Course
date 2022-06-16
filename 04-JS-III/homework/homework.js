@@ -70,16 +70,20 @@ function dePalabrasAFrase(palabras) {
 
 var frase = "";
 
-for ( var i = 0 ; i < palabras.length; i++){
+for ( var i = 0 ; i < palabras.length; i++) {
 
-  if( palabras.length - 1){
-    frase = frase + palabras[i] + "";
+  if (i < palabras.length - 1 ) {
+
+    frase = frase + palabras[i] + " "
   }
-  if( i === palabras.length -1 ){
+
+  if( i === palabras.length -1 ) {
     frase = frase + palabras[i]
   }
- return frase ; 
+  
 }
+
+return frase;
 
 
 }
@@ -90,15 +94,17 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
 
-  for( var i = 0 ; i < array.length ; i++){
-    if ( array[i] === elemento){
-      return true
-    }else
-    return false
-  }
+  for(var i = 0 ; i < array.length ; i++) {
 
+    if ( array[i] === elemento ) {
+
+      return true;
+     }
+    
+    }
+    return false;
+  
 }
-
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
@@ -141,10 +147,10 @@ function numeroMasGrande(numeros) {
        
      }
 
-     return mayor; 
+     
      
    }
-
+   return mayor; 
 }
 
 
@@ -174,11 +180,9 @@ function cuentoElementos(arreglo){
 
   var contador = 0;
   for( var i = 0 ; i < arreglo.length ; i ++){
-    if(arreglo.length[i] > 18){
-      contador++;
-    }
+    if(arreglo[i] > 18) contador++; 
   }
-  return contador
+  return contador;
 
 }
 
@@ -263,7 +267,7 @@ function mayorACien(array) {
 
 }
 
-c
+
 function breakStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array. 
@@ -301,7 +305,7 @@ function continueStatement(numero) {
   // Tu código:
 
   var array = [];
-  var suma = numero 
+  var suma = numero;
   for ( var i = 0 ; i < 10 ; i++){
      if ( i === 5){
        continue;
@@ -310,10 +314,10 @@ function continueStatement(numero) {
       suma += 2 ;
       array.push(suma);
      }
-     return array;
-
+     
 }
-
+ return array;
+  }
 
 // No modificar nada debajo de esta línea
 // --------------------------------
@@ -338,5 +342,8 @@ module.exports = {
   mesesDelAño,
   mayorACien,
   breakStatement,
-  continueStatement
-};
+  continueStatement,
+  
+  };
+
+
